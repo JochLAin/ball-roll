@@ -1,0 +1,32 @@
+{
+  "name": "nijiro",
+  "version": "1.0.0",
+  "description": "Blob game",
+  "main": "server/index.js",
+  "scripts": {
+    "build-dev": "npx webpack-turnkey --watch --eslint --sourcemaps",
+    "build-prod": "NODE_ENV=production npx webpack-turnkey --eslint --sourcemaps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JochLAin/nijiro.git"
+  },
+  "author": "Jocelyn Faihy <jocelyn@faihy.fr>",
+  "bugs": {
+    "url": "https://github.com/JochLAin/nijiro/issues"
+  },
+  "homepage": "https://github.com/JochLAin/nijiro#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-turnkey": "^1.9.4"
+  },
+  "dependencies": {
+    "babylonjs": "^4.0.3",
+    "crieur": "^1.0.13",
+    "fractale": "^2.2.3",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
