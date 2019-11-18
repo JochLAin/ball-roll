@@ -1,7 +1,7 @@
 {
-  "name": "nijiro",
+  "name": "ball-roll",
   "version": "1.0.0",
-  "description": "Blob game",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./server/index.js",

@@ -1,2 +1,0 @@
-# nijiro
-Blob game
