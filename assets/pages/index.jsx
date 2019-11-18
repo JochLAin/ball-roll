@@ -1,21 +1,19 @@
-import React, { Fragment } from 'react';
-import * as ReactDOM from 'react-dom';
-import BABYLON from "babylonjs";
-import { scene } from '../constants';
-import Box from '../components/box';
-import Scene from '../components/scene';
-import Skybox from '../components/skybox';
+import * as BABYLON from 'babylonjs';
+import { engine, scene } from '../constants';
+import '../stylesheets';
 
-const material = new BABYLON.StandardMaterial("box-material", scene);
-material.diffuseTexture = new BABYLON.Texture("images/box.png", scene);
+const sphere = BABYLON.MeshBuilder.CreateSphere('sphere', { segments: 16, diameter: 2 }, scene);
+sphere.position.y = 1;
 
-ReactDOM.render(
-    <Fragment>
-        <Scene  />
-        <Box name={`box-1`} position={{ x: -15, z: 15 }} size={2.5} />
-        <Box name={`box-2`} position={{ x: -15, z: -15 }} size={2.5} />
-        <Box name={`box-3`} position={{ x: 15, z: 15 }} size={2.5} />
-        <Box name={`box-4`} position={{ x: 15, z: -15 }} size={2.5} />
-    </Fragment>,
-    document.getElementById('root')
-);
+const ground = BABYLON.Mesh.CreateGround("ground",  { height: 6, width: 6, subdivisions: 2 }, scene);
+ground.rotation.x = Math.PI / 2;
+ground.checkCollisions = true;
+
+engine.resize();
+engine.runRenderLoop(() => {
+    scene.render();
+});
+
+window.addEventListener('resize', function() {
+    engine.resize();
+});

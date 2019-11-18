@@ -2,8 +2,9 @@
   "name": "nijiro",
   "version": "1.0.0",
   "description": "Blob game",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
+    "start": "npx electron .",
     "build-dev": "npx webpack-turnkey --watch --eslint --sourcemaps",
     "build-prod": "NODE_ENV=production npx webpack-turnkey --eslint --sourcemaps",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/JochLAin/nijiro#readme",
   "devDependencies": {
+    "electron": "^7.1.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-turnkey": "^1.9.4"

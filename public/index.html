@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+        <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
         <title>Nijiro</title>
     </head>
     <body>
-        <canvas id="scene"></canvas>
-        <article id="root"></article>
+        <canvas id="renderCanvas">
+
+        </canvas>
         <script src="js/index.js" async defer></script>
     </body>
 </html>
