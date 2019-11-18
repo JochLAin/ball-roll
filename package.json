@@ -4,7 +4,7 @@
   "description": "Blob game",
   "main": "index.js",
   "scripts": {
-    "start": "npx electron .",
+    "start": "nodemon ./server/index.js",
     "build-dev": "npx webpack-turnkey --watch --eslint --sourcemaps",
     "build-prod": "NODE_ENV=production npx webpack-turnkey --eslint --sourcemaps",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,15 +20,23 @@
   "homepage": "https://github.com/JochLAin/nijiro#readme",
   "devDependencies": {
     "electron": "^7.1.1",
+    "nodemon": "^1.19.4",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-turnkey": "^1.9.4"
   },
   "dependencies": {
     "babylonjs": "^4.0.3",
+    "cannon": "^0.6.2",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
     "crieur": "^1.0.13",
+    "express": "^4.17.1",
     "fractale": "^2.2.3",
+    "path": "^0.12.7",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
   }
 }

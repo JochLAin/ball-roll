@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+    server:
+        image: node
+        ports:
+            - 127.0.0.1:48130:80
+        volumes:
+            - .:/home/docker:rw
+        working_dir: /home/docker
+        command: npm start
+        labels:
+            - "traefik.frontend.rule=Host:ball-roll.local"
+            - "traefik.port=80"
+        networks: { default: { aliases: ['ball-roll.local']}}
