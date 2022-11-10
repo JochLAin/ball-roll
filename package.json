@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/JochLAin/nijiro#readme",
   "devDependencies": {
-    "electron": "^7.1.1",
+    "electron": "^18.3.7",
     "nodemon": "^1.19.4",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
